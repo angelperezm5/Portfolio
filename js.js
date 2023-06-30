@@ -84,3 +84,44 @@ progressBars.forEach(progressBar => {
   progressBarsObserver.observe(progressBar);
 });
 
+
+
+
+
+
+
+/*pruebas */
+window.addEventListener('DOMContentLoaded', function() {
+  var myText1 = document.getElementById('myTextmovil1');
+  var myText2 = document.getElementById('myTextmovil2');
+  var isFirstAnimation = true;
+
+  function startAnimation() {
+    if (isFirstAnimation) {
+      myText1.classList.add('typing-animation');
+    } else {
+      myText2.classList.add('typing-animation');
+    }
+  }
+
+  function resetAnimation() {
+    if (isFirstAnimation) {
+      myText1.classList.remove('typing-animation');
+      setTimeout(function() {
+        isFirstAnimation = false;
+        startAnimation();
+      }, 1000);
+    } else {
+      myText2.classList.remove('typing-animation');
+      setTimeout(function() {
+        isFirstAnimation = true;
+        startAnimation();
+      }, 1000);
+    }
+  }
+
+  startAnimation();
+
+  myText1.addEventListener('animationend', resetAnimation);
+  myText2.addEventListener('animationend', resetAnimation);
+});
