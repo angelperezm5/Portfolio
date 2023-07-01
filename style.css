@@ -8,15 +8,17 @@
 
 body {
 
-    background: rgb(20,108,148);
-    background: radial-gradient(circle, rgba(20,108,148,1) 0%, rgba(25,167,206,1) 50%, rgba(20,108,148,1) 100%);
-    color: white !important;
+    background-color: #FFF;
+    color: #000 !important;
     
 }
 
+.nav-link:hover{
+    color: #5BE9B9 !important;
+}
+
 .navbar.abajo{
-    background: rgb(20,108,148);
-    background: radial-gradient(circle, rgba(20,108,148,1) 0%, rgba(25,167,206,1) 100%, rgba(20,108,148,1) 100%);
+    background-color: #6E07F3;
     padding: 30px 20px;
     position: fixed;
     width: 100%;
@@ -33,11 +35,19 @@ header .logo {
     text-decoration: none;
 }
 
+header .logo:hover{
+    color: #5BE9B9;
+}
+
 #myText, #myTextmovil1, #myTextmovil2 {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     color: #FFF;
+}
+
+.bannerimg a i:hover{
+    color: #6E07F3 !important;
 }
 
 @media (max-width: 900px) {
@@ -142,7 +152,7 @@ header .logo {
 }
 
 
-.bannerimgdesk{
+.bannerimg{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,13 +164,13 @@ header .logo {
     background-attachment: fixed;
   }
 
-.bannerimgdesk p{
+.bannerimg p{
     font-size: 2em;
     font-weight: bold;
 }
 
 @media (max-width: 768px) {
-    .bannerimgdesk{
+    .bannerimg{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -181,7 +191,7 @@ header .logo {
     padding: 10px 20px;
     font-weight: bold;
     color: #fff;
-    background-color: #146C94;
+    background-color: #6E07F3;
     border: none;
     border-radius: 5px;
     outline: none;
@@ -192,7 +202,8 @@ header .logo {
   }
 
   #my-button:hover {
-    background-color: #19A7CE;
+    background-color: #5BE9B9;
+    color: #000;
   }
 
 
@@ -212,13 +223,14 @@ header .logo {
 }
 
 .titulo {
+    font-weight: bold;
     text-align: center;
     margin-top: 0%;
     margin-bottom: 3%;
     position: relative;
     font-size: 26px;
     padding-bottom: 20px;
-    color: #FFF;
+    color: #6E07F3;
 }
 
 .titulo::before {
@@ -372,7 +384,7 @@ header .logo {
 
   .progress-bar {
     height: 100%;
-    background-color: #A7A7A7  !important; /* Color de fondo de la barra de progreso */
+    background-color: #6E07F3  !important; /* Color de fondo de la barra de progreso */
     color: #ffffff; /* Color del texto dentro de la barra de progreso */
     text-align: center;
     transition: width 0.3s ease-in-out;
@@ -386,7 +398,7 @@ header .logo {
   }
 
 .softskills i{
-    color: #FFF !important;
+    color: #6E07F3 !important;
 }
 .softskills span{
     font-size: 18px;
@@ -450,7 +462,7 @@ header .logo {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: white;
+    background-color: #6E07F3;
     position: absolute;
     top: 12%; /* Cambiado a top: 10% */
     left: 50%;
@@ -466,12 +478,15 @@ header .logo {
   }
   
   .education-card {
-    background-color: white;
+    background-color: #6E07F3;
     padding: 20px;
     border-radius: 10px;
     width: 350px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: black;
+    color: #FFF;
+  }
+  .education-card h5{
+    color: #FFF;
   }
   
   .education-card-right {
@@ -485,7 +500,7 @@ header .logo {
     top: -8%;
     width: 2px;
     height: 110%;
-    background-color: white;
+    background-color: #6E07F3;
     transform: translateX(-50%);
     z-index: 1;
   }
@@ -500,23 +515,6 @@ header .logo {
     transform: translate(-50%, -100%);
   }
 
-  /*
-  .education-card {
-    position: relative;
-}
-
-.arrow-right {
-    position: absolute;
-    top: 50%;
-    right: -10px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #FFF;
-}
-*/
 
   @media (max-width: 1568px) {
     .titleeducacion{
@@ -548,7 +546,7 @@ header .logo {
         margin: auto;
         width: 2px;
         z-index: 0;
-        background-color: white;
+        background-color: #6E07F3;
       }
     
       .timeline-content {
@@ -644,7 +642,7 @@ header .logo {
     text-transform: uppercase;
 }
 
-.proyecto4, .proyecto5, .proyecto6{
+.proyecto3, .proyecto4, .proyecto5, .proyecto6{
     margin-top: 60px !important;
 }
 
@@ -671,25 +669,29 @@ header .logo {
     text-align: center;
 }
 
+.cardcontactame h4{
+   color: #000;
+}
+
 .cardcontactame a{
     text-decoration: none;
 }
 
 
 .iconoscontact i{
-    color: #FFF;
+    color: #000;
     font-size: 50px;
     margin: 20px;
 }
 
 .iconoscontact i:hover{
     transform: scale(1.2);
-    color: #A7A7A7;
+    color: #6E07F3;
 }
 
 .imgcontactame,.cardcontactame{
     min-height: 650px;
-    box-shadow: 0 0 10px #FFF;
+    box-shadow: 0 0 10px #6E07F3;;
     padding: 20px;
 }
 
@@ -735,3 +737,20 @@ header .logo {
         font-size: 18px;
     }
 }
+
+footer {
+    background-color: #6E07F3;
+    color: #FFF;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  p {
+    margin: 0;
+  }
+  

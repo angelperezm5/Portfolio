@@ -89,7 +89,6 @@ progressBars.forEach(progressBar => {
 
 
 
-
 /*pruebas */
 window.addEventListener('DOMContentLoaded', function() {
   var myText1 = document.getElementById('myTextmovil1');
@@ -125,3 +124,8 @@ window.addEventListener('DOMContentLoaded', function() {
   myText1.addEventListener('animationend', resetAnimation);
   myText2.addEventListener('animationend', resetAnimation);
 });
+
+
+var currentYear = new Date().getFullYear();
+document.getElementById("currentYear").textContent = currentYear;
+
