@@ -129,3 +129,84 @@ window.addEventListener('DOMContentLoaded', function() {
 var currentYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = currentYear;
 
+
+
+
+//Hace que aparezca la animacion de abajo a arriba cuando se visualiza el elemento
+function estaEnViewport(elemento) {
+  var rect = elemento.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function manejarScroll() {
+  var contenedores = document.querySelectorAll(".animar-entrada");
+  contenedores.forEach(function(contenedor) {
+    if (estaEnViewport(contenedor)) {
+      contenedor.style.animation = "aparecer 1s forwards";
+    }
+  });
+}
+
+window.addEventListener("scroll", manejarScroll);
+window.addEventListener("resize", manejarScroll);
+
+manejarScroll(); // Ejecutar la función al cargar la página para comprobar si los elementos ya están visibles
+
+
+
+//Hace que aparezca la animacion de izquierda a derecha cuando se visualiza el elemento
+function estaEnViewport2(elemento) {
+  var rect = elemento.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function manejarScroll2() {
+  var contenedores = document.querySelectorAll(".animar-izquierda");
+  contenedores.forEach(function(contenedor) {
+    if (estaEnViewport(contenedor)) {
+      contenedor.style.animation = "aparecer-izquierda 1s forwards";
+    }
+  });
+}
+
+window.addEventListener("scroll", manejarScroll2);
+window.addEventListener("resize", manejarScroll2);
+
+manejarScroll2(); // Ejecutar la función al cargar la página para comprobar si los elementos ya están visibles
+
+//
+
+
+function estaEnViewport(elemento) {
+  var rect = elemento.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function manejarScroll3() {
+  var contenedores = document.querySelectorAll(".animar-derecha");
+  contenedores.forEach(function(contenedor) {
+    if (estaEnViewport(contenedor)) {
+      contenedor.style.animation = "aparecer-derecha 1s forwards";
+    }
+  });
+}
+
+window.addEventListener("scroll", manejarScroll3);
+window.addEventListener("resize", manejarScroll3);
+
+manejarScroll3(); // Ejecutar la función al cargar la página para comprobar si los elementos ya están visibles

@@ -754,3 +754,57 @@ footer {
     margin: 0;
   }
   
+
+  /*Animación*/
+  
+  .animar-entrada {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  @keyframes aparecer {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+/**/
+
+.animar-izquierda {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  
+  @keyframes aparecer-izquierda {
+    0% {
+      opacity: 0;
+      transform: translateX(-150px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /**/
+
+  .animar-derecha {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  
+  @keyframes aparecer-derecha {
+    0% {
+      opacity: 0;
+      transform: translateX(150px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
