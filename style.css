@@ -582,13 +582,13 @@ header .logo:hover{
 
 
 
-  /* Portfolio */
+  /* Proyectos */
 
-#portfolio{
+#proyectos{
     padding-top: 100px;
 }
 
-#portfolio .proyectos-container{
+#proyectos .proyectos-container{
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -745,66 +745,62 @@ footer {
     text-align: center;
   }
   
-  .container {
+  footer .container {
     max-width: 960px;
     margin: 0 auto;
   }
   
-  p {
+  footer p {
+    padding: 10px;
     margin: 0;
   }
   
 
-  /*Animación*/
-  
-  .animar-entrada {
-    opacity: 0;
-    transform: translateY(60px);
-  }
 
-  @keyframes aparecer {
-    0% {
-      opacity: 0;
-      transform: translateY(60px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-/**/
+/*Entra de izquierda a derecha*/
+.hidden{
 
-.animar-izquierda {
-    opacity: 0;
-    transform: translateX(-150px);
-  }
-  
-  @keyframes aparecer-izquierda {
-    0% {
-      opacity: 0;
-      transform: translateX(-150px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
 
-  /**/
+}
 
-  .animar-derecha {
-    opacity: 0;
-    transform: translateX(150px);
+.show{
+
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+
+}
+
+@media(prefers-reduced-motion) {
+  .hidden{
+    transition: none;
   }
-  
-  @keyframes aparecer-derecha {
-    0% {
-      opacity: 0;
-      transform: translateX(150px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+}
+
+
+.tarjetas:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.tarjetas:nth-child(3){
+  transition-delay: 400ms;
+}
+
+.tarjetas:nth-child(4){
+  transition-delay: 600ms;
+}
+
+.tarjetas:nth-child(5){
+  transition-delay: 800ms;
+}
+
+.tarjetas:nth-child(6){
+  transition-delay: 1000ms;
+}
+
+
+
