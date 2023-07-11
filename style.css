@@ -89,6 +89,8 @@ header .logo:hover{
   color: #FFF;
 }
 
+
+
 .icono-sol,
 .icono-luna {
   transition: transform 0.5s ease, opacity 0.5s ease;
