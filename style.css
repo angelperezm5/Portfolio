@@ -39,6 +39,75 @@ header .logo:hover{
     color: #5BE9B9;
 }
 
+/* Inicio Modo oscuro */
+.oscuro {
+  background-color: #222222;
+  color: white !important;
+}
+
+.modooscuro i {
+  font-size: 20px;
+}
+
+.modooscuro .icono-sol {
+  margin-left: 10px;
+}
+
+.modooscuro .icono-luna {
+  margin-right: 10px;
+}
+
+.modooscuro {
+  position: relative;
+  padding: 3px;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  width: 90px;
+  background-color: #FFF;
+  border-radius: 20px;
+}
+
+.modooscuroactivado{
+  position: relative;
+  padding: 3px;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  width: 90px;
+  background-color: #222222;
+  border-radius: 20px;
+}
+
+.modooscuro .icono-luna {
+  display: none;
+  float: right;
+  color: #FFF;
+}
+
+.icono-sol,
+.icono-luna {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.icono-sol.desaparecer {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.icono-luna.desaparecer {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Fin modo oscuro*/
+
+
+
 #myText, #myTextmovil1, #myTextmovil2 {
     display: inline-block;
     overflow: hidden;
@@ -117,7 +186,7 @@ header .logo:hover{
     }
 
 }  
-  
+
 
 .typing-animation {
     animation: typing 2s steps(20);
@@ -624,7 +693,7 @@ header .logo:hover{
 }
 
 .tarjetas:hover h2 {
-    display: none;
+  opacity: 0;
 }
 
 .tarjetas h2 {
@@ -669,7 +738,7 @@ header .logo:hover{
     text-align: center;
 }
 
-.cardcontactame h4{
+.correocontacto{
    color: #000;
 }
 
@@ -686,12 +755,18 @@ header .logo:hover{
 
 .iconoscontact i:hover{
     transform: scale(1.2);
-    color: #6E07F3;
+    color: #6E07F3 !important;
+}
+
+.iconosmodooscuro1, .iconosmodooscuro2, .iconosmodooscuro3{
+  color: #FFF;
+  font-size: 50px;
+  margin: 20px;
 }
 
 .imgcontactame,.cardcontactame{
     min-height: 650px;
-    box-shadow: 0 0 10px #6E07F3;;
+    box-shadow: 0 0 10px #6E07F3;
     padding: 20px;
 }
 

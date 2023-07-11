@@ -145,3 +145,63 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const botonModoOscuro = document.querySelector('.modooscuro');
+  const body = document.querySelector('body');
+  const correocontacto = document.querySelector('.correocontacto');
+  const iconosmodooscuro1 = document.querySelector('.iconosmodooscuro1');
+  const iconosmodooscuro2 = document.querySelector('.iconosmodooscuro2');
+  const iconosmodooscuro3 = document.querySelector('.iconosmodooscuro3');
+  
+  botonModoOscuro.addEventListener('click', function() {
+    body.classList.toggle('oscuro');
+    correocontacto.classList.toggle('oscuro');
+    iconosmodooscuro1.classList.toggle('oscuro');
+    iconosmodooscuro2.classList.toggle('oscuro');
+    iconosmodooscuro3.classList.toggle('oscuro');
+    botonModoOscuro.classList.toggle('modooscuroactivado');
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const botonModoOscuro = document.querySelector('.modooscuro');
+  const iconoSol = document.querySelector('.icono-sol');
+  const iconoLuna = document.querySelector('.icono-luna');
+
+  botonModoOscuro.addEventListener('click', function() {
+    if (iconoSol.style.display === 'none') {
+      // Desaparecer la luna hacia la izquierda
+      iconoLuna.classList.add('desaparecer');
+      setTimeout(function() {
+        iconoLuna.style.display = 'none';
+      }, 500);
+
+      // Mostrar el sol con animación desde la derecha
+      iconoSol.style.display = 'inline-block';
+      iconoSol.classList.add('desaparecer');
+      setTimeout(function() {
+        iconoSol.classList.remove('desaparecer');
+      }, 100);
+    } else {
+      // Desaparecer el sol hacia la derecha
+      iconoSol.classList.add('desaparecer');
+      setTimeout(function() {
+        iconoSol.style.display = 'none';
+      }, 500);
+
+      // Mostrar la luna con animación desde la izquierda
+      iconoLuna.style.display = 'inline-block';
+      iconoLuna.classList.add('desaparecer');
+      setTimeout(function() {
+        iconoLuna.classList.remove('desaparecer');
+      }, 100);
+    }
+  });
+});
+
