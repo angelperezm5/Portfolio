@@ -1,3 +1,26 @@
+/* Gestionar el color del navbar si esta clickado o no */
+  // Obtengo el elemento con la clase "navbar-toggler"
+  const navbarToggler = document.querySelector(".navbar-toggler");
+
+  // Obtengo el elemento con la clase "navbar-click"
+  const navbarClick = document.querySelector(".navbar-click");
+
+  let isColorApplied = false;
+
+  // Agregar un evento clic al elemento con la clase "navbar-toggler"
+  navbarToggler.addEventListener("click", function() {
+    // Si el color ya se ha aplicado, restablecer el color de fondo a su estado original.
+    if (isColorApplied) {
+      navbarClick.style.backgroundColor = "";
+    } else {
+      // Si el color no se ha aplicado, cambiar el color de fondo al color deseado.
+      navbarClick.style.backgroundColor = "#6E07F3";
+    }
+
+    // Cambiar el estado para el próximo clic.
+    isColorApplied = !isColorApplied;
+  });
+
 /* Función para el navbar, cuando se hace scroll se le añade una clase para ponerle un color de fondo. */
 
 window.addEventListener("scroll", function(){
@@ -84,12 +107,7 @@ progressBars.forEach(progressBar => {
   progressBarsObserver.observe(progressBar);
 });
 
-
-
-
-
-
-/*pruebas */
+/* Animar texto banner */
 window.addEventListener('DOMContentLoaded', function() {
   var myText1 = document.getElementById('myTextmovil1');
   var myText2 = document.getElementById('myTextmovil2');
@@ -126,12 +144,13 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 
+/* Año actual */
 var currentYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = currentYear;
 
 
 
-/*Pruebas*/
+/* Añadir o quitar clase show según si el elemento se esta visualizando o no (animaciones de entrada de los elementos) */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) =>{
     console.log(entry)
@@ -149,7 +168,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 
 
-
+/* Función para el modo oscuro */
 document.addEventListener('DOMContentLoaded', function() {
   const botonModoOscuro = document.querySelector('.modooscuro');
   const body = document.querySelector('body');
@@ -204,4 +223,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
