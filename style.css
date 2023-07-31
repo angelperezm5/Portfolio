@@ -237,7 +237,7 @@ header .logo:hover{
     align-items: center;
     justify-content: center;
     width: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("imgs/montaña.jpg");
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("imgs/montaña.webp");
     height: 100vh;
     background-size: cover;
     background-position: center center;
@@ -255,7 +255,7 @@ header .logo:hover{
         align-items: center;
         justify-content: center;
         width: 100%;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("imgs/montaña.jpg");
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("imgs/montaña.webp");
         height: 100vh;
         background-size: cover;
         background-position: center center;
@@ -289,10 +289,10 @@ header .logo:hover{
 
 
 
-  /* Sobre mi inicio */
+  /* Sobre mí inicio */
 
 #sobremi{
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
   .sobre{
@@ -318,7 +318,7 @@ header .logo:hover{
     position: absolute;
     width: 80px;
     height: 3px;
-    background-color: #FFF;
+    background-color: #6E07F3;
     bottom: 0;
     left: calc(50% - 40px);
 }
@@ -430,7 +430,7 @@ header .logo:hover{
     }
 
     #sobremi{
-        padding-top: 20px;
+        padding-top: 70px;
     }
 
     .hardskillstitle{
@@ -449,6 +449,10 @@ header .logo:hover{
     .softskills span{
         font-size: 15px;
     }
+
+    .presentacion{
+      margin-top: 50px;
+  }
 
 }
   
@@ -507,6 +511,7 @@ header .logo:hover{
   .bandera {
     width: 20px;
     height: auto;
+    margin-right: 5px;
   }
 
   .cardru:hover {
@@ -520,12 +525,12 @@ header .logo:hover{
   .cardcat:hover {
     background: linear-gradient(to right, #f2a800, #c60c30, #fbda1a, #c60c30, #fbda1a);
   }
-  /* Sobre mi final */
+  /* Sobre mí final */
 
   
 /* Apartado Trayectoria */
 #trayectoria{
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 .education-section {
@@ -652,6 +657,11 @@ header .logo:hover{
       .timeline-dot-bottom {
         display: none;
       }
+
+      #trayectoria{
+        margin-top: 0px;
+        padding: 40;
+    }
 }
 
 @media (max-width: 594px) {
@@ -665,7 +675,7 @@ header .logo:hover{
   /* Proyectos */
 
 #proyectos{
-    padding-top: 100px;
+    padding-top: 40px;
 }
 
 #proyectos .proyectos-container{
@@ -733,12 +743,17 @@ header .logo:hover{
     }
 }
 
+@media (max-width: 767px) {
+  #proyectos{
+    margin-top: 0 !important;
+  }
+}
 
 /* Contactame */
 
 
 #contactame{
-    padding-top: 50px;
+    padding-top: 40px;
     margin-bottom: 100px;
 }
 
@@ -782,12 +797,13 @@ header .logo:hover{
 }
 
 .imgcontactame{
-    background-image: url("imgs/yo_contacto.jpg");
+    background-image: url("imgs/contactame.webp");
     background-size: cover;
     background-position: center center;
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: brightness(1.2);
 }
 
 .imgcontactame img{
@@ -799,6 +815,10 @@ header .logo:hover{
 @media (max-width: 767px) {
     .contactocorreo{
         margin-top: 50px !important;
+    }
+    #contactame{
+      margin-top: 0;
+      padding-top: 40px;
     }
 }
 
